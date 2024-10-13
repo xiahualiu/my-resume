@@ -1,0 +1,258 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.7.2, 28 August 2024) written by LianTze Lim (liantze@gmail.com). Compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 and simpleicons packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/simpleicons for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% If using pdflatex:
+\usepackage[rm]{roboto}
+\usepackage[defaultsans]{lato}
+% \usepackage{sourcesanspro}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+\renewcommand{\cvRatingMarker}{\faCircle}
+% ...and the markers for the date/location for \cvevent
+% \renewcommand{\cvDateMarker}{\faCalendar*[regular]}
+% \renewcommand{\cvLocationMarker}{\faMapMarker*}
+
+
+% If your CV/résumé is in a language other than English,
+% then you probably want to change these so that when you
+% copy-paste from the PDF or run pdftotext, the location
+% and date marker icons for \cvevent will paste as correct
+% translations. For example Spanish:
+% \renewcommand{\locationname}{Ubicación}
+% \renewcommand{\datename}{Fecha}
+
+%% sample.bib contains your publications
+%\addbibresource{sample.bib}
+
+\begin{document}
+\name{Xiahua Liu}
+\tagline{Advanced Software Engineer (C++/Rust/Algorithm)}
+%% You can add multiple photos on the left or right
+%%\photoR{2.8cm}{Globe_High}
+% \photoL{2.5cm}{Yacht_High,Suitcase_High}
+
+\personalinfo{%
+    % Not all of these are required!
+    \email{foo_bar@email.com}
+    \phone{000-00-0000}
+    \mailaddress{Foo Street, 00000 U.S.}
+    \location{Melbourne, FL}
+    \newline
+    \homepage{xiahua.pages.dev}
+    % \twitter{@twitterhandle}
+    \linkedin{xiahualiu}
+    \github{xiahualiu}
+    %% You can add your own arbitrary detail with
+    %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+    % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+
+    %% Or you can declare your own field with
+    %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+    % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+    % \gitlab{your_id}
+    %%
+    %% For services and platforms like Mastodon where there isn't a
+    %% straightforward relation between the user ID/nickname and the hyperlink,
+    %% you can use \printinfo directly e.g.
+    % \printinfo{\faMastodon}{@username@instace}[https://instance.url/@username]
+    %% But if you absolutely want to create new dedicated info fields for
+    %% such platforms, then use \NewInfoField* with a star:
+    % \NewInfoField*{mastodon}{\faMastodon}
+    %% then you can use \mastodon, with TWO arguments where the 2nd argument is
+    %% the full hyperlink.
+    % \mastodon{@username@instance}{https://instance.url/@username}
+}
+
+\makecvheader
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+    \cvsection{Experience}
+
+    \cvevent{Senior Software Engineer}{Wabtec}{May 2023 -- Ongoing}{Melbourne, Florida}
+    \begin{itemize}
+        \item Wabtec Trip Optimizer\textsuperscript{\textregistered} developer.
+        \item Increased million-line code build speed by $\sim30\%$.
+        \item Optimized test case checkout speed by $\sim100\%$.
+    \end{itemize}
+
+    \divider
+
+    \cvevent{Lead Control Engineer}{GE Aerospace/Hyliion}{Dec 2021 -- Jan 2023}{West Chester, Ohio}
+    \begin{itemize}
+        \item Core team member of GE KARNO\textsuperscript{\textregistered} project.
+        \item Proposed a low-cost solution for the product commercialization.
+        \item Created project demo with MATLAB/Simulink.
+        \item Project was acquired by Hyliion in Sept, 2022 with \$37M.
+    \end{itemize}
+
+    \divider
+
+    \cvevent{Software Engineer}{Clean Earth Rovers LLC}{Jan 2021 -- Nov 2021}{Cincinnati, Ohio}
+    \begin{itemize}
+        \item Control algorithm development based on modern control theory,
+        including feedback linearization and EKF.
+        \item C++/ROS package development for the first prototype.
+    \end{itemize}
+
+    \divider
+
+    \cvevent{Robotics Researcher}{IRAS, University of Cincinnati}{Aug 2020 -- Dec 2021}{Cincinnati, Ohio}
+    \begin{itemize}
+        \item Control theory research.
+    \end{itemize}
+
+    \divider
+
+    \cvevent{Embedded System Engineer Intern}{Blueway Electric Appliances Co.,Ltd}{Sept 2017 -- Jun 2018}{Guangdong, China}
+    \begin{itemize}
+        \item Designed OBD-II for BMS (SAE J1979, ISO 15765-4).
+        \item Developed on NXP S32K144 SoC with FreeRTOS.
+    \end{itemize}
+
+    \cvsection{Projects}
+
+    \cvevent{Various Open Source Projects}{GitHub}{}{}
+    \begin{itemize}
+        \item 100-star project owner on GitHub.
+        \item Contributed to WSL, VS Code and ESP-IDF, etc.
+        \item PawnDB, a secure OLTP DBMS with pBFT/Paxos algorithm.
+    \end{itemize}
+
+    % use ONLY \newpage if you want to force a page break for
+    % ONLY the current column
+    \newpage
+
+    %% Switch to the right column. This will now automatically move to the second
+    %% page if the content is too long.
+    \switchcolumn
+
+    \cvsection{Most Proud of}
+
+    \cvachievement{\faTrophy}{Graduate Scholarship (Full)}{UC CEAS School 2019-2021}
+
+    \cvsection{Education}
+
+    \cvevent{Master of Science}{University of Cincinnati}{Aug 2019 -- Dec 2021 \hspace{1.2cm} GPA: 3.8/4.0}{}
+    \divider
+    \cvevent{Bachelor of Science}{Beijing Institute of Tech}{Aug 2014 -- June 2018 \hspace{1.15cm} GPA : 82\%}{}
+
+    \cvsection{Skills}
+
+    \cvtag{Control Theory}
+    \cvtag{System Optimization}
+
+    \divider\smallskip
+
+    \cvtag{C++}
+    \cvtag{Rust}
+    \cvtag{Assembly}
+    \cvtag{Python} \\
+    \cvtag{MATLAB}
+    \cvtag{Embedded System}\\
+    \cvtag{RTOS}
+    \cvtag{Linux}
+    \cvtag{Docker}
+    \cvtag{ROS} \\
+    \cvtag{Aerospace}
+    \cvtag{Automotive}
+    \cvtag{Industry} \\
+    \cvtag{Embedded Database}
+    \cvtag{Network}
+
+    %% Yeah I didn't spend too much time making all the
+    %% spacing consistent... sorry. Use \smallskip, \medskip,
+    %% \bigskip, \vspace etc to make adjustments.
+    \medskip
+
+    \cvsection{Strength}
+
+    \begin{itemize}
+    \item DO-178, ISO-26262, IEC-61508, etc.
+    \smallskip
+    \item Modern C++11/14/17/20 and Rust.
+    \smallskip
+    \item SAST/Sanitizers, CI/CD pipelines.
+    \smallskip
+    \item FreeRTOS, NuttX, QNX, etc. RTOSs.
+    \smallskip
+    \item Advanced control algorithms.
+    \smallskip
+    \item Embedded/hardware systems.
+    \smallskip
+    \item X86\_64, PowerPC, ARM, RV64, etc.
+    \smallskip
+    \item Docker, QEMU, etc.
+    \smallskip
+    \item Modern IP network structure.
+    \smallskip
+    \item High-reliability DBMS design.
+    \smallskip
+    \item Low-level code optimization.
+    \smallskip
+    \item MATLAB simulation.
+    \smallskip
+    \item Waterfall or Agile project management.
+    \smallskip
+    \item Multiple large project experience.
+    \end{itemize}
+
+
+
+\end{paracol}
+
+\end{document}

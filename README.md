@@ -8,6 +8,7 @@ The resume template used is [AltaCV](https://github.com/liantze/AltaCV), you can
 
 Some sensitive information such as my phone number and address are not populated in the source code.
 
+
 ## Build
 
 ### Requirement
@@ -20,7 +21,11 @@ Some sensitive information such as my phone number and address are not populated
 pdflatex main.tex
 ```
 
-## Download PDFs
+## Preview
+
+![](screenshot.png)
+
+## Get the latest PDFs
 
 You can find the latest PDFs as artifacts from the [GitHub Action](https://github.com/xiahualiu/my-resume/actions) page.
 

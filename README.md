@@ -6,10 +6,9 @@ One two-page resume covering software, Linux, controls, and robotics experience.
 
 - [Resume PDF](resume.pdf)
 - [Plain text](resume.txt)
-- [LaTeX content](resume.tex)
-- [Formatting, contact information, and education](resume-common.tex)
+- [LaTeX source](resume.tex)
 
-The resume uses a single-column layout with Source Sans 3 at 11 points. Headings and job titles use Bold, main bullets and skill labels use Semibold, and supporting text uses Regular. Public contact links are included; add private contact information in `resume-common.tex` before submitting if needed.
+All content and formatting live in `resume.tex`. The resume uses a single-column layout with Source Sans 3 at 11 points. Headings and job titles use Bold, main bullets and skill labels use Semibold, and supporting text uses Regular. Public contact links are included; add private contact information in `resume.tex` before submitting if needed.
 
 ## Fonts
 
@@ -19,17 +18,25 @@ Fonts are embedded in the finished PDF; recipients only need `resume.pdf`.
 
 ## Build
 
-Install TeX Live with XeLaTeX, `fontspec`, `geometry`, `microtype`, `enumitem`, `titlesec`, and `hyperref`, plus GNU Make. For plain-text export, install Poppler (`poppler-utils` on Debian/Ubuntu).
+Install TeX Live with XeLaTeX, `fontspec`, `geometry`, `microtype`, `enumitem`, `titlesec`, and `hyperref`. On Debian/Ubuntu:
 
 ```bash
-make
-make text
+sudo apt install texlive-xetex texlive-latex-extra texlive-fonts-recommended
 ```
 
-The finished files are `resume.pdf` and `resume.txt`. Intermediate files stay in `build/`.
+From the repository root, run XeLaTeX twice to produce `resume.pdf` and resolve PDF links:
 
-- `make -B text` rebuilds the PDF and plain text from scratch.
-- `make clean` removes intermediate files while keeping the finished resume.
-- `pdftotext resume.pdf -` displays the PDF's reading order.
+```bash
+xelatex -halt-on-error resume.tex
+xelatex -halt-on-error resume.tex
+```
+
+The auxiliary files `resume.aux`, `resume.log`, and `resume.out` are ignored by Git and can be deleted after building.
+
+To refresh the optional plain-text copy, install Poppler (`sudo apt install poppler-utils` on Debian/Ubuntu), then run:
+
+```bash
+pdftotext -enc UTF-8 -nopgbrk resume.pdf resume.txt
+```
 
 The GitHub workflow builds `resume.tex` with XeLaTeX and uploads `resume.pdf` as the `PDF` artifact on the [Actions page](https://github.com/xiahualiu/my-resume/actions).

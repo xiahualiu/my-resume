@@ -1,9 +1,57 @@
-\input{resume-common.tex}
-\resumetitle{Senior Software Engineer | C++ / Rust / Python / Linux / Robotics}
-\hypersetup{pdftitle={Xiahua Liu - Software, Linux, Controls and Robotics Resume}}
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1.75cm]{geometry}
+\usepackage{fontspec}
+% Preserve source characters when multiple Unicode characters share a glyph.
+\XeTeXgenerateactualtext=1
+\setmainfont{SourceSans3}[
+  Path=fonts/,
+  Extension=.otf,
+  UprightFont=*-Regular,
+  ItalicFont=*-It,
+  BoldFont=*-Bold,
+  BoldItalicFont=*-BoldIt,
+  Ligatures=NoCommon
+]
+\newfontface\resumesemibold{SourceSans3-Semibold.otf}[Path=fonts/,Ligatures=NoCommon]
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdfauthor={Xiahua Liu},
+  pdftitle={Xiahua Liu - Software, Linux, Controls and Robotics Resume},
+  pdflang={en-US}
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1pt}
+\raggedright
+% Keep words intact when extracting PDF text.
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\setlist[itemize]{leftmargin=1.2em,label=\textbullet,itemsep=2pt,topsep=2pt,parsep=0pt,partopsep=0pt}
+% Give main responsibilities more weight than their supporting details.
+\setlist[itemize,1]{before=\resumesemibold}
+\setlist[itemize,2]{before=\normalfont,itemsep=1pt,topsep=1pt}
+\titleformat{\section}{\large\bfseries}{}{0pt}{}
+\titlespacing*{\section}{0pt}{10pt}{5pt}
+
+\newcommand{\resumetitle}{Senior Software Engineer | C++ / Rust / Python / Linux / Robotics}
+\newcommand{\resumejob}[4]{%
+  \par\addvspace{7pt}%
+  \textbf{#1}\par\nopagebreak
+  #2 | #3 | #4\par\nopagebreak
+}
+
+\newcommand{\resumeskill}[2]{{\resumesemibold #1:} #2\par}
 
 \begin{document}
-\resumeheader
+{\LARGE\bfseries Xiahua Liu}\par
+{\normalsize\bfseries \resumetitle}\par
+Pleasanton, CA\par
+Website: \href{https://xiahua.pages.dev}{xiahua.pages.dev}\quad
+LinkedIn: \href{https://www.linkedin.com/in/xiahualiu}{linkedin.com/in/xiahualiu}\quad
+GitHub: \href{https://github.com/xiahualiu}{github.com/xiahualiu}\par
 
 \section*{Professional Summary}
 \begin{itemize}[before=\normalfont,itemsep=1pt,topsep=2pt]
@@ -72,7 +120,10 @@
   \end{itemize}
 \end{itemize}
 
-\resumecontinued
+\newpage
+{\large\bfseries Xiahua Liu}\par
+\resumetitle\par
+\section*{Work Experience (continued)}
 
 \resumejob{Lead Control Engineer}{GE Aerospace / Hyliion}{Dec 2021 - Jan 2023}{West Chester, OH}
 \begin{itemize}
@@ -122,5 +173,14 @@ systemd, Microsoft WSL, Visual Studio Code, Espressif ESP-IDF
 
 \href{https://github.com/xiahualiu/wg_gaming_installer}{Owner of a GitHub project with 100+ stars.}
 
-\resumeeducation
+\section*{Education}
+\textbf{Master of Science in Aerospace Engineering}\par
+University of Cincinnati | 2019 - 2021\par
+GPA: 3.8/4.0; full graduate scholarship\par
+Thesis: vehicle dynamics simulation, trajectory tracking, nonlinear control, and state estimation.\par
+\href{https://github.com/xiahualiu/ms-thesis}{github.com/xiahualiu/ms-thesis}\par
+\smallskip
+\textbf{Bachelor of Science in Automotive Engineering}\par
+Beijing Institute of Technology | 2014 - 2018\par
+Contributor to the \href{https://www.overleaf.com/latex/templates/beijing-institute-of-technology-bit-2024-version-thesis-template/bxjqynnmbjtk}{official graduate thesis LaTeX template on Overleaf}\par
 \end{document}

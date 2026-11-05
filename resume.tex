@@ -1,0 +1,126 @@
+\input{resume-common.tex}
+\resumetitle{Senior Software Engineer | C++ / Rust / Python / Linux / Robotics}
+\hypersetup{pdftitle={Xiahua Liu - Software, Linux, Controls and Robotics Resume}}
+
+\begin{document}
+\resumeheader
+
+\section*{Professional Summary}
+\begin{itemize}[before=\normalfont,itemsep=1pt,topsep=2pt]
+  \item 6+ years of experience in biotech / aerospace / automotive / railroad systems.
+  \item Hands-on experience working with cross-functional teams to bring commercial products to customers.
+  \item Research background in robotics, control theory, machine learning (ML), and reinforcement learning (RL).
+  \item Full system optimization at both the kernel and userspace levels to meet high throughput or low latency goals.
+\end{itemize}
+
+\section*{Technical Skills}
+\resumeskill{Programming Languages}{C++ (11/14/17/20), Rust, Python, MATLAB}
+
+\resumeskill{Controls \& Estimation}{Control theory, extended Kalman filter (EKF), reinforcement learning (RL), etc.}
+
+\resumeskill{Linux}{Device drivers and kernel customization, upstream systemd contributor, Secure Boot, LUKS}
+
+\resumeskill{Real-Time Operating Systems}{FreeRTOS, QNX, RT-Linux}
+
+\resumeskill{Robotics Software}{Robot Operating System (ROS), MATLAB/Simulink}
+
+\resumeskill{Image Processing}{OpenCV, autofocus algorithms, feature extraction, imaging system calibration}
+
+\resumeskill{Systems}{Real-time concurrent programming, gRPC / REST API design, state machines}
+
+\resumeskill{Networking}{Routing / VPN / NAT and firewall configuration, network troubleshooting}
+
+\resumeskill{Processors \& Microcontrollers}{ARM, RISC-V, x86, ESP32, NXP S32K144}
+
+\resumeskill{Automotive Standards}{ISO 26262, SAE J1939, SAE J1979, ISO 15765-4}
+
+\section*{Work Experience}
+
+\resumejob{Software Engineer III}{10x Genomics}{May 2025 - Oct 2026}{Pleasanton, CA}
+\begin{itemize}
+  \item Led the development of Secure Boot and LUKS OS security features for Atera\textsuperscript{\textregistered}.
+  \begin{itemize}
+    \item Managed kernel and device driver releases and signing on AWS CloudHSM and KMS.
+    \item Developed QEMU end-to-end (E2E) boot tests with Open Virtual Machine Firmware (OVMF).
+    \item Supported OTA upgrades of both the UEFI UKI image and Linux drivers.
+  \end{itemize}
+  \item Collaborated with the Teledyne DALSA\textsuperscript{\textregistered} Europe team on Linux device driver development.
+  \begin{itemize}
+    \item Adjusted kernel variables to optimize the TLB cache for maximum throughput.
+    \item Enabled kernel features for framegrabber driver troubleshooting.
+  \end{itemize}
+  \item Developed Python/C++ optical calibration software.
+  \begin{itemize}
+    \item Developed a path planning algorithm to reduce calibration time from 6\textendash8 hours to 30 minutes.
+    \item Calibrations include chromatic aberration, point spread function (PSF), field flatness, distortion, etc.
+    \item Achieved subpixel ($<100$ nm) XYZ alignment precision using a customized PCA algorithm.
+  \end{itemize}
+  \item Developed hardware and software autofocus algorithms using OpenCV (C++ and Python).
+  \item Collaborated with optics, electrical engineering (EE), camera, manufacturing, and field service teams to troubleshoot issues and support Atera's transition from the lab into the field.
+\end{itemize}
+
+\resumejob{Senior Software Engineer}{Wabtec}{May 2023 - May 2025}{Melbourne, FL}
+\begin{itemize}
+  \item Maintained the large-scale production C++ codebase for Trip Optimizer\textsuperscript{\textregistered}.
+  \begin{itemize}
+    \item Migrated legacy C++98 code to C++11 and fixed various low-level race conditions.
+    \item Compared data operations with those of modern data systems to highlight non-ACID operations.
+  \end{itemize}
+  \item Improved software testing processes for the production codebase.
+  \begin{itemize}
+    \item Developed a VS Code Dev Container for software development and testing.
+  \end{itemize}
+\end{itemize}
+
+\resumecontinued
+
+\resumejob{Lead Control Engineer}{GE Aerospace / Hyliion}{Dec 2021 - Jan 2023}{West Chester, OH}
+\begin{itemize}
+  \item Developed embedded C++ control software for KARNO\textsuperscript{\textregistered} using MATLAB and Simulink.
+  \begin{itemize}
+    \item Designed circuits and PCBs for Type K thermocouples, flame rectification, and emergency stops, etc.
+    \item State machines for cold/warm start sequences and combustion temperature regulation.
+  \end{itemize}
+  \item Collaborated with manufacturing teams to troubleshoot issues and support the product's transition toward deployment.
+\end{itemize}
+
+\resumejob{Software Engineer}{Clean Earth Rovers LLC}{Jan 2021 - Nov 2021}{Cincinnati, OH}
+\begin{itemize}
+  \item Led C++/ROS software development for Piranha\textsuperscript{\textregistered}, the company's first water-surface robot prototype.
+  \begin{itemize}
+    \item Selected controllers ranging from PX4 to Raspberry Pi and ESP32.
+  \end{itemize}
+  \item Developed nonlinear control algorithms using feedback linearization for the robotic prototype.
+  \begin{itemize}
+    \item Modeled robot dynamics using SolidWorks and MATLAB.
+  \end{itemize}
+  \item Implemented an extended Kalman filter (EKF) for robot state estimation.
+  \begin{itemize}
+    \item Referenced open-source EKF code from PX4 and ArduPilot.
+    \item Wrote the EKF model in pure Python.
+  \end{itemize}
+\end{itemize}
+
+\resumejob{Robotics Researcher}{IRAS, University of Cincinnati}{Aug 2020 - Dec 2021}{Cincinnati, OH}
+\begin{itemize}
+  \item Researched control theory and reinforcement learning for robotic manipulation at IRAS.
+  \item Used OpenCV for computer vision and image processing in robotics research.
+\end{itemize}
+
+\resumejob{Embedded System Engineer Intern}{Blueway Electric Appliances Co., Ltd.}{Sep 2017 - Jun 2018}{Guangdong, China}
+\begin{itemize}
+  \item Implemented OBD-II for a battery management system using SAE J1979 and ISO 15765-4.
+  \item Deployed battery-management diagnostics on the NXP S32K144 SoC running FreeRTOS.
+\end{itemize}
+
+\section*{Open Source Projects}
+\textbf{PawnDB | Real-Time Database}\par
+Designed and developed a lightweight database management system for real-time systems, implementing two-phase locking (2PL) for concurrency control.
+
+\textbf{Upstream contributions}\par
+systemd, Microsoft WSL, Visual Studio Code, Espressif ESP-IDF
+
+\href{https://github.com/xiahualiu/wg_gaming_installer}{Owner of a GitHub project with 100+ stars.}
+
+\resumeeducation
+\end{document}

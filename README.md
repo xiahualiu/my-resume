@@ -1,32 +1,35 @@
-[![PDFLatex](https://github.com/xiahualiu/my-resume/actions/workflows/build.yaml/badge.svg?branch=main)](https://github.com/xiahualiu/my-resume/actions/workflows/build.yaml)
+[![XeLaTeX](https://github.com/xiahualiu/my-resume/actions/workflows/build.yaml/badge.svg?branch=main)](https://github.com/xiahualiu/my-resume/actions/workflows/build.yaml)
 
-# My Resume
+# Xiahua Liu — Resume
 
-This project contains the LaTeX source code for building my resume.
+One two-page resume covering software, Linux, controls, and robotics experience.
 
-The resume template used is [AltaCV](https://github.com/liantze/AltaCV), you can also find it on Overleaf.
+- [Resume PDF](resume.pdf)
+- [Plain text](resume.txt)
+- [LaTeX content](resume.tex)
+- [Formatting, contact information, and education](resume-common.tex)
 
-Some sensitive information such as my phone number and address are not populated in the source code.
+The resume uses a single-column layout with Source Sans 3 at 11 points. Headings and job titles use Bold, main bullets and skill labels use Semibold, and supporting text uses Regular. Public contact links are included; add private contact information in `resume-common.tex` before submitting if needed.
 
+## Fonts
+
+Keep `fonts/` in the repository. XeLaTeX loads the OTF files directly, so builds work without installing fonts on the system. The folder contains the Regular, Semibold, Bold, Italic, and Bold Italic files referenced by the font configuration, along with their [SIL Open Font License](fonts/OFL.txt).
+
+Fonts are embedded in the finished PDF; recipients only need `resume.pdf`.
 
 ## Build
 
-### Requirement
-
-* the latest [TexLive](https://tug.org/texlive/) package.
-
-### Build Command
+Install TeX Live with XeLaTeX, `fontspec`, `geometry`, `microtype`, `enumitem`, `titlesec`, and `hyperref`, plus GNU Make. For plain-text export, install Poppler (`poppler-utils` on Debian/Ubuntu).
 
 ```bash
-pdflatex main.tex
+make
+make text
 ```
 
-## Preview
+The finished files are `resume.pdf` and `resume.txt`. Intermediate files stay in `build/`.
 
-![](screenshot.png)
+- `make -B text` rebuilds the PDF and plain text from scratch.
+- `make clean` removes intermediate files while keeping the finished resume.
+- `pdftotext resume.pdf -` displays the PDF's reading order.
 
-## Get the latest PDFs
-
-You can find the latest PDFs as artifacts from the [GitHub Action](https://github.com/xiahualiu/my-resume/actions) page.
-
-Choose the latest workflow run there, then download the artifact.
+The GitHub workflow builds `resume.tex` with XeLaTeX and uploads `resume.pdf` as the `PDF` artifact on the [Actions page](https://github.com/xiahualiu/my-resume/actions).

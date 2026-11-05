@@ -1,4 +1,5 @@
 *.xmpi
+*.xmpdata
 *.aux
 *.bcf
 *.out
@@ -8,4 +9,6 @@
 *.fdb_latexmk
 *.bbl
 *.pdf
+!/resume.pdf
 *.gz
+/build/

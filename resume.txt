@@ -1,0 +1,101 @@
+Xiahua Liu
+
+Senior Software Engineer | C++ / Rust / Python / Linux / Robotics
+Pleasanton, CA
+Website: xiahua.pages.dev LinkedIn: linkedin.com/in/xiahualiu GitHub: github.com/xiahualiu
+
+Professional Summary
+• 6+ years of experience in biotech / aerospace / automotive / railroad systems.
+• Hands-on experience working with cross-functional teams to bring commercial products to customers.
+• Research background in robotics, control theory, machine learning (ML), and reinforcement learning (RL).
+• Full system optimization at both the kernel and userspace levels to meet high throughput or low latency
+goals.
+
+Technical Skills
+Programming Languages: C++ (11/14/17/20), Rust, Python, MATLAB
+Controls & Estimation: Control theory, extended Kalman filter (EKF), reinforcement learning (RL), etc.
+Linux: Device drivers and kernel customization, upstream systemd contributor, Secure Boot, LUKS
+Real-Time Operating Systems: FreeRTOS, QNX, RT-Linux
+Robotics Software: Robot Operating System (ROS), MATLAB/Simulink
+Image Processing: OpenCV, autofocus algorithms, feature extraction, imaging system calibration
+Systems: Real-time concurrent programming, gRPC / REST API design, state machines
+Networking: Routing / VPN / NAT and firewall configuration, network troubleshooting
+Processors & Microcontrollers: ARM, RISC-V, x86, ESP32, NXP S32K144
+Automotive Standards: ISO 26262, SAE J1939, SAE J1979, ISO 15765-4
+
+Work Experience
+Software Engineer III
+10x Genomics | May 2025 - Oct 2026 | Pleasanton, CA
+• Led the development of Secure Boot and LUKS OS security features for Atera® .
+• Managed kernel and device driver releases and signing on AWS CloudHSM and KMS.
+• Developed QEMU end-to-end (E2E) boot tests with Open Virtual Machine Firmware (OVMF).
+• Supported OTA upgrades of both the UEFI UKI image and Linux drivers.
+• Collaborated with the Teledyne DALSA® Europe team on Linux device driver development.
+• Adjusted kernel variables to optimize the TLB cache for maximum throughput.
+• Enabled kernel features for framegrabber driver troubleshooting.
+• Developed Python/C++ optical calibration software.
+• Developed a path planning algorithm to reduce calibration time from 6–8 hours to 30 minutes.
+• Calibrations include chromatic aberration, point spread function (PSF), field flatness, distortion, etc.
+• Achieved subpixel (< 100 nm) XYZ alignment precision using a customized PCA algorithm.
+• Developed hardware and software autofocus algorithms using OpenCV (C++ and Python).
+• Collaborated with optics, electrical engineering (EE), camera, manufacturing, and field service teams to
+troubleshoot issues and support Atera's transition from the lab into the field.
+Senior Software Engineer
+Wabtec | May 2023 - May 2025 | Melbourne, FL
+• Maintained the large-scale production C++ codebase for Trip Optimizer® .
+• Migrated legacy C++98 code to C++11 and fixed various low-level race conditions.
+• Compared data operations with those of modern data systems to highlight non-ACID operations.
+• Improved software testing processes for the production codebase.
+• Developed a VS Code Dev Container for software development and testing.
+
+1
+
+Xiahua Liu
+
+Senior Software Engineer | C++ / Rust / Python / Linux / Robotics
+
+Work Experience (continued)
+Lead Control Engineer
+GE Aerospace / Hyliion | Dec 2021 - Jan 2023 | West Chester, OH
+• Developed embedded C++ control software for KARNO® using MATLAB and Simulink.
+• Designed circuits and PCBs for Type K thermocouples, flame rectification, and emergency stops, etc.
+• State machines for cold/warm start sequences and combustion temperature regulation.
+• Collaborated with manufacturing teams to troubleshoot issues and support the product's transition
+toward deployment.
+Software Engineer
+Clean Earth Rovers LLC | Jan 2021 - Nov 2021 | Cincinnati, OH
+• Led C++/ROS software development for Piranha® , the company's first water-surface robot prototype.
+• Selected controllers ranging from PX4 to Raspberry Pi and ESP32.
+• Developed nonlinear control algorithms using feedback linearization for the robotic prototype.
+• Modeled robot dynamics using SolidWorks and MATLAB.
+• Implemented an extended Kalman filter (EKF) for robot state estimation.
+• Referenced open-source EKF code from PX4 and ArduPilot.
+• Wrote the EKF model in pure Python.
+Robotics Researcher
+IRAS, University of Cincinnati | Aug 2020 - Dec 2021 | Cincinnati, OH
+• Researched control theory and reinforcement learning for robotic manipulation at IRAS.
+• Used OpenCV for computer vision and image processing in robotics research.
+Embedded System Engineer Intern
+Blueway Electric Appliances Co., Ltd. | Sep 2017 - Jun 2018 | Guangdong, China
+• Implemented OBD-II for a battery management system using SAE J1979 and ISO 15765-4.
+• Deployed battery-management diagnostics on the NXP S32K144 SoC running FreeRTOS.
+
+Open Source Projects
+PawnDB | Real-Time Database
+Designed and developed a lightweight database management system for real-time systems, implementing
+two-phase locking (2PL) for concurrency control.
+Upstream contributions
+systemd, Microsoft WSL, Visual Studio Code, Espressif ESP-IDF
+Owner of a GitHub project with 100+ stars.
+
+Education
+Master of Science in Aerospace Engineering
+University of Cincinnati | 2019 - 2021
+GPA: 3.8/4.0; full graduate scholarship
+Thesis: vehicle dynamics simulation, trajectory tracking, nonlinear control, and state estimation.
+github.com/xiahualiu/ms-thesis
+Bachelor of Science in Automotive Engineering
+Beijing Institute of Technology | 2014 - 2018
+Contributor to the official graduate thesis LaTeX template on Overleaf
+
+2
